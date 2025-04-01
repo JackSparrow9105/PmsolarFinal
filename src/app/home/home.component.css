@@ -1,0 +1,55 @@
+.divrow{
+  background: #e37b19;
+  color: white;
+}
+.divrow .row {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+ 
+}
+
+.divcolborder {
+  border-right: solid #994b02 1px;
+  border-left: solid #994b02 1px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 2px 0 4px rgba(235, 220, 220, 0.3);
+}
+
+.divcol {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px;
+  word-wrap: break-word;
+}
+
+/* Remove border and make email + phone in one line on mobile */
+@media (max-width: 767px) { 
+  .divcolborder {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px;
+  }
+
+  .contact-info .email, .contact-info .phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .contact-info .phone {
+    margin-left: 10px;
+  }
+}

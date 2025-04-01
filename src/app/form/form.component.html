@@ -1,0 +1,206 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-7">
+      <div class="card shadow-lg border-0 rounded-lg mt-5">
+        <div class="card-header">
+          <h2>
+            <img src="PMKusumYojna.png" alt="error"
+              width="100%" height="auto"></h2>
+          <hr>
+          <h3 class="text-center font-weight-light my-4" style="color:#272829; Font-weight:600;">Online Registration
+            Form</h3>
+        </div>
+
+        <div class="card-body">
+          <form  class="form" (submit)="onSubmit()">
+
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <div class="form-floating mb-3 mb-md-0">
+                  <input class="form-control"  #fullNameInput id="fname" name="fname" type="text" [(ngModel)]="formData.fname" placeholder="Enter your first name"  required>
+                  <label for="fname">First name</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-floating mb-3 mb-md-0">
+                  <input class="form-control" id="lname" name="lname" type="text" placeholder="Enter your last name" [(ngModel)]="formData.lname"   >
+                  <label for="lname">Last name</label>
+                </div>
+              </div>
+
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-floating mb-3 mb-md-0">
+                  <input class="form-control" id="fathername" name="fathername" type="text"
+                    placeholder="Enter your father's name" [(ngModel)]="formData.fathername">
+                  <label for="fathername">Father's name</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-floating mb-3 mb-md-0">
+                  <select class="form-select" id="category" name="category"  [(ngModel)]="formData.category">
+                    <option value="">Select category</option>
+                    <option value="OBC">OBC</option>
+                    <option value="ST">ST</option>
+                    <option value="SC">SC</option>
+                    <option value="GENERAL">GENERAL</option>
+                    <!-- Add more options if needed -->
+                  </select>
+                  <label for="category">Category</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-floating mb-3 mb-md-0">
+                  <select class="form-select" id="gender" name="gender" [(ngModel)]="formData.gender">
+                    <option value="">Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <label for="gender">Gender</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-floating mb-3 mb-md-0">
+                  <input class="form-control" id="dob" name="dob" type="date" placeholder="Select your date of birth" [(ngModel)]="formData.dob">
+                  <label for="dob">Date of Birth</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="aadharNo" name="aadhar_no" type="text" [(ngModel)]="formData.aadhar"
+                placeholder="Enter your Aadhar number" >
+              <label for="aadharNo">Aadhar Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="pan_card_no" name="pan_card_no" type="text" #city [(ngModel)]="formData.pan"
+              [(ngModel)]="formData.pan"
+                placeholder="Enter your PAN card number"  >
+              <label for="pan_card_no">PAN Card Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-control" id="landlord_name"  [(ngModel)]="formData.hp" name="hp" required #hp [(ngModel)]="formData.hp">
+                <option value="1">Select</option>
+                <option value="1HP">1 HP</option>
+                <option value="2HP">2 HP</option>
+                <option value="3HP">3 HP</option>
+                <option value="5HP">5 HP</option>
+                <option value="7.5HP">7.5 HP</option>
+                <option value="10HP">10 HP</option>
+                <option value="12.5HP">12.5 HP</option>
+                <option value="15HP">15 HP</option>
+                <option value="20HP">20 HP</option>
+
+              </select>
+              <label for="landlord_name">Select HP</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="permanent_address" name="permanent_address" [(ngModel)]="formData.Address"
+                placeholder="Enter your permanent address" style="height: 100px;"></textarea>
+              <label for="permanent_address">Permanent Address</label>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-floating mb-3 mb-md-0">
+                  <input
+                  class="form-control"
+                  id="email"   [(ngModel)]="formData.email"
+                   name="email"
+                   type="email"
+                   placeholder="name@example.com"  #Email >
+                  <label for="email">Email address</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input class="form-control" id="contact" name="contact" type="text" placeholder="1234567890"
+                    pattern="[0-9]{10}" title="10 numeric characters only" maxlength="10"  #phone [(ngModel)]="formData.phone" >
+                  <label for="contact">Phone Number</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="bank_name" name="bank_name" type="text"
+                placeholder="Enter your bank name"  [(ngModel)]="formData.bank" >
+              <label for="bank_name">Bank Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="account_holder_name" name="account_holder_name" type="text"
+                placeholder="Enter your account holder name" [(ngModel)]="formData.accountholder" >
+              <label for="account_holder_name">Account Holder Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="account_number" name="account_number" type="text"
+                placeholder="Enter your account number" [(ngModel)]="formData.Accounnumber" >
+              <label for="account_number">Account Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="ifsc_code" name="ifsc_code" type="text"
+                placeholder="Enter your IFSC code"  [(ngModel)]="formData.ifsc">
+              <label for="ifsc_code">IFSC Code</label>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-floating mb-3 mb-md-0">
+                <!-- Checkbox for accepting the application fee -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="accepted" id="investment" name="investment">
+                  <label class="form-check-label" for="investment">
+                    I accept the ₹2500 application fee for the Pradhan Mantri Kusum Yojana.
+                  </label>
+                </div>
+              </div>
+            </div>
+            <br>
+
+
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="aadhar_card">Upload Aadhar Card</label>
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="aadhar_card" name="aadhar_card" type="file">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="pan_card">Upload PAN Card</label>
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="pan_card" name="pan_card" type="file">
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="passport_photo">Upload One Photo</label>
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="passport_photo" name="passport_photo" type="file">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="location_image">Upload Bank Passbook</label>
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="location_image" name="location_image" type="file">
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 mb-0">
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-block" name="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+</div>

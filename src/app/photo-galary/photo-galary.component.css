@@ -1,0 +1,23 @@
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #8ac14a; /* Background color */
+    color: red; /* Text color */
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+   
+}
+
+.marquee-text {
+    display: inline-block;
+
+    animation: marquee 30s linear infinite;
+    font-size: 16px;
+    font-family: 'Arial', 'Helvetica', 'sans-serif', 'Noto Sans Devanagari', 'Lohit Devanagari';
+}
+
+@keyframes marquee {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
+}

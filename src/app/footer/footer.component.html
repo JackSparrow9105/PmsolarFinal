@@ -1,0 +1,48 @@
+<style>
+    .custom-container {
+        background-color: #e37b19;
+        padding: 10px;
+    }
+
+    .custom-box {
+       /* Add border */
+       color: white;
+        padding: 5px;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .custom-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+        .custom-box {
+            width: auto;
+        }
+    }
+</style>
+
+<div class="container-fluid custom-container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+            <div class="container">
+                <div class="row custom-row">
+                    <div class="col-md-4 custom-box" style="border-right: 1px solid;">Login Here</div>
+                    <div class="col-md-4 custom-box" style="border-right: 1px solid;"> Copy right</div>
+                    <div class="col-md-4 custom-box" style="border-right: 1px solid;">Terms and Conditions</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row mt-3 mb-3 justify-content-center">
+        <div class="col-md-7 text-center custom-box">
+            Copyright 2024, PRADHAN MANTRI KISAN URJA SURAKSHA EVAM UTTHAAN MAHABHIYAN (PM-KUSUM).  
+            All Rights Reserved.
+        </div>
+    </div>
+</div>
