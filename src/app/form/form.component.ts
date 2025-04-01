@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 interface FormData {
   fname: string;
   lname: string;
@@ -30,6 +30,9 @@ interface FormData {
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+  constructor(private router:Router) {
+
+  }
   // Use your NEW deployment URL here
   @ViewChild('fullNameInput') fullNameInput!: ElementRef;
   @ViewChild('Email') Email!: ElementRef;
@@ -79,4 +82,5 @@ export class FormComponent {
       alert('Data may have been saved - please check');
      // this.resetForm();
     }
+    this.router.navigate(['/fundingDepartment']);
   }}
