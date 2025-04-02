@@ -62,11 +62,11 @@ export class FormComponent {
     ifsc:'',
   };
 
-  async onSubmit() {
+   onSubmit() {
     // Your validation code remains the same...
 
     try {
-      const response = await fetch(this.googleSheetUrl, {
+      const response =  fetch(this.googleSheetUrl, {
         method: 'POST',
         mode: 'no-cors', // Only if you can't modify the server
         headers: {
@@ -75,7 +75,7 @@ export class FormComponent {
         body: new URLSearchParams(this.formData as any).toString()
       });
 
-      alert('Data saved successfully!');
+      //alert('Data saved successfully!');
       //this.resetForm();
     } catch (error) {
       console.error('Error:', error);
